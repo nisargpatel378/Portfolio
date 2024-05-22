@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NISARG</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/5f3aac69de.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!------header-------->
+  <div id="header">
+    <div class="container">
+      <nav>
+      
+        <h2 class="logo">ɴɪꜱᴀʀɢ</h2>
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+          <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>Web Devloper</p>
+        <h1>Hi, I'm <span>Nisarg</span><br>Patel from Gujarat.</h1>
+        
+      </div>
+    </div>
+  </div>
+
+  <!------about-------->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/2.jpg" alt="">
+        </div>
+
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Hello everyone!!. My name is Nisarg Patel and i'm currently studying Computer Engineering from LDRP institute of technology and research.I'm from Ahemdabad.I am living currently the best phase of my life with college friends and hostel friends.</p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Web Development</span><br>Web app Development</li>
+              <li><span>Python Programming</span><br>Python basics</li>
+            </ul>
+          </div>
+          
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2024 - Current</span><br>Currently doing internship at The Special Character</li>
+              <li><span>2021 - 2025</span><br>Currently completing my graduation from LDRP-ITR</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2021 - 2025</span><br>Currently doing my graduation in CE from LDRP-ITR</li>
+              <li><span>2021</span><br>Completed my 12th standard</li>
+            </ul>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </div>
+    
+  </div>
+
+  <!------My services-------->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Design</h2>
+          <p>Web design refers to the process of creating the visual appearance and layout of websites. It involves the use of graphic design, color theory, typography, and other elements to enhance the overall aesthetics and user experience of a website.</p>
+          <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-python"></i>
+          <h2>Python Programming</h2>
+          <p>Python is a versatile and easy-to-learn programming language known for its clear syntax and readability. It's widely used for web development, data analysis, artificial intelligence, scientific computing, and more. Python's large standard library and active community support make it a popular choice among beginners and professionals alike.</p>
+          <a href="https://developer.mozilla.org/en-US/docs/Glossary/Python">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!------contact-------->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-envelope"></i>Email : patelnisarg378@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i>Phone no : 1234567890</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100071267776447&mibextid=2JQ9oc" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/i/flow/login" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/nisarg_patel_378?igsh=MXRnbXFmdjkxa2JnMA==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/patel-nisarg-satishkumar-b91ab1260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form>
+            <input type="text" name="Name" placeholder="Enter Your Name" required>
+            <input type="email" name="Email" placeholder="Enter Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Enter Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright 	&#169 2024. Made by <i class="fa-solid fa-heart"></i> Nisarg Patel</p>
+    </div>
+  </div>
+  
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
+  </script>
+
+</body>
+
+</html>
